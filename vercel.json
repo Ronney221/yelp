@@ -8,6 +8,6 @@
     "routes": [
       { "src": "/api/yelp", "dest": "/api/yelp.py" },
       { "src": "/api/analyze", "dest": "/api/analyze.py" },
-      { "src": "/(.*)", "dest": "/index.html" }
+      { "src": "/(.*)", "dest": "/dist/index.html" }
     ]
   }
