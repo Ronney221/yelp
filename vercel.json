@@ -9,8 +9,5 @@
       { "src": "/api/yelp", "dest": "/api/yelp.py" },
       { "src": "/api/analyze", "dest": "/api/analyze.py" },
       { "src": "/(.*)", "dest": "/index.html" }
-    ],
-    "dev": {
-      "command": "vite --port $PORT"
-    }
+    ]
   }
