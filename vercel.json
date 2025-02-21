@@ -3,8 +3,7 @@
     "builds": [
       { "src": "api/yelp.py", "use": "@vercel/python" },
       { "src": "api/analyze.py", "use": "@vercel/python" },
-      { "src": "*.html", "use": "@vercel/static" },
-      { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+      { "src": "*.html", "use": "@vercel/static" }
     ],
     "routes": [
       { "src": "/api/yelp", "dest": "/api/yelp.py" },

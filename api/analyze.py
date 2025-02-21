@@ -29,19 +29,19 @@ def main(args):
             concepts=ConceptsOptions(limit=3)
         )
         response = nlu.analyze(text=review["text"], features=features).get_result()
-        
+
         sentiment = response["sentiment"]["document"]
         emotion = response["emotion"]["document"]["emotion"]
         concepts = [
             {"text": c["text"], "relevance": convert_to_percentage(c["relevance"])}
             for c in response.get("concepts", []) if c["relevance"] > 0.5
         ]
-        
+
         emotions = [
             f"{k.capitalize()}: {convert_to_percentage(v)}%"
             for k, v in sorted(emotion.items(), key=lambda x: x[1], reverse=True)
         ]
-        
+
         results.append({
             "name": review["name"],
             "text": review["text"],
